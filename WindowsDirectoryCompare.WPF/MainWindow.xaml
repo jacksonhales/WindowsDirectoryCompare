@@ -1,0 +1,30 @@
+﻿<Window x:Class="WindowsDirectoryCompare.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsDirectoryCompare.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label>Directory 1</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtDirectory1" MinWidth="400"></TextBox>
+                <Button x:Name="btnDirectoryBrowse1" Click="btnDirectoryBrowse1_Click">Browse</Button>
+            </StackPanel>
+            <Label>Directory 2</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtDirectory2" MinWidth="400"></TextBox>
+                <Button x:Name="btnDirectoryBrowse2" Click="btnDirectoryBrowse2_Click">Browse</Button>
+            </StackPanel>
+            <Label>Folders in directory 1 that are missing from directory 2</Label>
+            <ListBox x:Name="lbxDirectory1" MinHeight="100" MaxHeight="100" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            </ListBox>
+            <Label>Folders in directory 2 that are missing from directory 1</Label>
+            <ListBox x:Name="lbxDirectory2" MinHeight="100" MaxHeight="100" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            </ListBox>
+        </StackPanel>
+        
+    </Grid>
+</Window>
